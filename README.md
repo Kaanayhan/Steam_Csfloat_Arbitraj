@@ -65,3 +65,53 @@ Final balances:
 ### 1) Install dependencies
 ```bash
 npm install
+2) Run dev server
+npm run dev
+
+Open the URL shown in the terminal (usually):
+
+http://localhost:5173/
+
+3) Build for production
+npm run build
+4) Preview production build
+npm run preview
+Project Structure
+steam-csfloat-arb/
+  src/
+    App.vue      # Main UI + logic
+    main.ts      # Vue bootstrap
+    style.css    # Global styles
+Inputs Guide
+Starting Balances
+
+Initial Steam Wallet: Your starting Steam wallet amount
+
+Initial CSFloat Balance: Optional existing CSFloat balance
+
+Leg 1 (Steam → CSFloat)
+
+Quantity: number of items
+
+Steam Buy (per item): price paid per item on Steam
+
+CSFloat Net (per item): net amount received on CSFloat per item (after all fees)
+
+Leg 2 (CSFloat → Steam)
+
+Quantity: number of items
+
+CSFloat Buy (per item): price paid per item on CSFloat
+
+Steam Net (per item): net amount received on Steam per item (after all fees)
+
+Notes / Limitations
+
+This calculator does not fetch live prices.,
+It assumes you manually enter “net” values that already include marketplace fees.
+
+Steam rounding/minimum fees are not modeled unless you embed them into the net inputs.
+
+It assumes you manually enter “net” values that already include marketplace fees.
+
+Steam rounding/minimum fees are not modeled unless you embed them into the net inputs.
